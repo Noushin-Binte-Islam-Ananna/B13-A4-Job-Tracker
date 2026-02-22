@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-200">
+    <header class="w-[80%] mx-auto">
+        <h1 class="text-3xl font-bold mb-4">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg p-4">
+                <p>Total</p>
+                <p class="text-2xl font-bold" id="total">0</p>
+            </div>
+            <div class="bg-white rounded-lg p-4">
+                <p>Interview</p>
+                <p class="text-2xl font-bold text-green-600" id="interviewCount">0</p>
+            </div>
+            <div class="bg-white rounded-lg p-4">
+                <p>Rejected</p>
+                <p class="text-2xl font-bold text-red-600" id="rejectedCount">0</p>
+            </div>
+        </div>
+        <hr class="border-gray-400 my-5">
+    </header>
+
+    <main class="w-[80%] mx-auto">
+        <div class="flex justify-between my-5">
+            <h3 class="text-lg font-bold">Available Jobs</h3>
+            <p class="font-semibold text-gray-500">0 jobs</p>
+        </div>
+        
+        <div class="flex gap-3 d my-5">
+            <button onclick="toggleStyle('all-filter-btn')" class="bg-blue-500 text-white rounded-sm px-9 py-1" id="all-filter-btn">All</button>
+            <button onclick="toggleStyle('interview-filter-btn')" class="bg-white text-gray-500 rounded-sm px-4 py-1" id="interview-filter-btn">Interview</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" class="bg-white text-gray-500 rounded-sm px-4 py-1" id="rejected-filter-btn">Rejected</button>
+        </div>
+
+        <!-- Filtered card -->
+
+        <section id="allCards" class="space-y-6">
+            <!-- Job Card 1 -->
+            <div class="bg-white p-8 rounded-xl">
+                <div class="flex justify-between">
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <!-- Header -->
+                        <div>
+                            <p class="text-lg font-bold text-gray-900">Mobile First Corp</p>
+                            <p class="text-lg font-semibold text-gray-500">React Native Developer</p>
+                        </div>
+
+                        <!-- Job Details -->
+                        <div>
+                            <p class="text-lg text-gray-500 my-5">Remote . Full-time . $130,000 - $175,000</p>
+                            
+                            <!-- Status Badge -->
+                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            
+                            <!-- Description -->
+                            <p class="text-gray-700 mt-3 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3">
+                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                        </div>
+                    </div>
+
+                    <!-- Delete Button -->
+                    <button label="Delete job" class="border-2 border-gray-400 w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fa-regular fa-trash-can text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="bg-white p-8 rounded-xl">
+                <div class="flex justify-between">
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <!-- Header -->
+                        <div>
+                            <p class="text-lg font-bold text-gray-900">Mobile First Corp</p>
+                            <p class="text-lg font-semibold text-gray-500">React Native Developer</p>
+                        </div>
+
+                        <!-- Job Details -->
+                        <div>
+                            <p class="text-lg text-gray-500 my-5">Remote . Full-time . $130,000 - $175,000</p>
+                            
+                            <!-- Status Badge -->
+                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            
+                            <!-- Description -->
+                            <p class="text-gray-700 mt-3 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3">
+                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                        </div>
+                    </div>
+
+                    <!-- Delete Button -->
+                    <button label="Delete job" class="border-2 border-gray-400 w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fa-regular fa-trash-can text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="bg-white p-8 rounded-xl">
+                <div class="flex justify-between">
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <!-- Header -->
+                        <div>
+                            <p class="text-lg font-bold text-gray-900">Mobile First Corp</p>
+                            <p class="text-lg font-semibold text-gray-500">React Native Developer</p>
+                        </div>
+
+                        <!-- Job Details -->
+                        <div>
+                            <p class="text-lg text-gray-500 my-5">Remote . Full-time . $130,000 - $175,000</p>
+                            
+                            <!-- Status Badge -->
+                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            
+                            <!-- Description -->
+                            <p class="text-gray-700 mt-3 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3">
+                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                        </div>
+                    </div>
+
+                    <!-- Delete Button -->
+                    <button label="Delete job" class="border-2 border-gray-400 w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fa-regular fa-trash-can text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="bg-white p-8 rounded-xl">
+                <div class="flex justify-between">
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <!-- Header -->
+                        <div>
+                            <p class="text-lg font-bold text-gray-900">Mobile First Corp</p>
+                            <p class="text-lg font-semibold text-gray-500">React Native Developer</p>
+                        </div>
+
+                        <!-- Job Details -->
+                        <div>
+                            <p class="text-lg text-gray-500 my-5">Remote . Full-time . $130,000 - $175,000</p>
+                            
+                            <!-- Status Badge -->
+                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            
+                            <!-- Description -->
+                            <p class="text-gray-700 mt-3 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3">
+                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                        </div>
+                    </div>
+
+                    <!-- Delete Button -->
+                    <button label="Delete job" class="border-2 border-gray-400 w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fa-regular fa-trash-can text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Job Card 5 -->
+            <div class="bg-white p-8 rounded-xl">
+                <div class="flex justify-between">
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <!-- Header -->
+                        <div>
+                            <p class="text-lg font-bold text-gray-900">Mobile First Corp</p>
+                            <p class="text-lg font-semibold text-gray-500">React Native Developer</p>
+                        </div>
+
+                        <!-- Job Details -->
+                        <div>
+                            <p class="text-lg text-gray-500 my-5">Remote . Full-time . $130,000 - $175,000</p>
+                            
+                            <!-- Status Badge -->
+                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            
+                            <!-- Description -->
+                            <p class="text-gray-700 mt-3 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3">
+                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                        </div>
+                    </div>
+
+                    <!-- Delete Button -->
+                    <button label="Delete job" class="border-2 border-gray-400 w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fa-regular fa-trash-can text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Job Card 6 -->
+            <div class="bg-white p-8 rounded-xl">
+                <div class="flex justify-between">
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <!-- Header -->
+                        <div>
+                            <p class="text-lg font-bold text-gray-900">Mobile First Corp</p>
+                            <p class="text-lg font-semibold text-gray-500">React Native Developer</p>
+                        </div>
+
+                        <!-- Job Details -->
+                        <div>
+                            <p class="text-lg text-gray-500 my-5">Remote . Full-time . $130,000 - $175,000</p>
+                            
+                            <!-- Status Badge -->
+                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            
+                            <!-- Description -->
+                            <p class="text-gray-700 mt-3 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3">
+                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                        </div>
+                    </div>
+
+                    <!-- Delete Button -->
+                    <button label="Delete job" class="border-2 border-gray-400 w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fa-regular fa-trash-can text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Job Card 7 -->
+            <div class="bg-white p-8 rounded-xl">
+                <div class="flex justify-between">
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <!-- Header -->
+                        <div>
+                            <p class="text-lg font-bold text-gray-900">Mobile First Corp</p>
+                            <p class="text-lg font-semibold text-gray-500">React Native Developer</p>
+                        </div>
+
+                        <!-- Job Details -->
+                        <div>
+                            <p class="text-lg text-gray-500 my-5">Remote . Full-time . $130,000 - $175,000</p>
+                            
+                            <!-- Status Badge -->
+                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            
+                            <!-- Description -->
+                            <p class="text-gray-700 mt-3 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3">
+                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                        </div>
+                    </div>
+
+                    <!-- Delete Button -->
+                    <button label="Delete job" class="border-2 border-gray-400 w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fa-regular fa-trash-can text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Job Card 8 -->
+            <div class="bg-white p-8 rounded-xl">
+                <div class="flex justify-between">
+                    <!-- Main Content -->
+                    <div class="flex-1">
+                        <!-- Header -->
+                        <div>
+                            <p class="text-lg font-bold text-gray-900">Mobile First Corp</p>
+                            <p class="text-lg font-semibold text-gray-500">React Native Developer</p>
+                        </div>
+
+                        <!-- Job Details -->
+                        <div>
+                            <p class="text-lg text-gray-500 my-5">Remote . Full-time . $130,000 - $175,000</p>
+                            
+                            <!-- Status Badge -->
+                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            
+                            <!-- Description -->
+                            <p class="text-gray-700 mt-3 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3">
+                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                        </div>
+                    </div>
+
+                    <!-- Delete Button -->
+                    <button label="Delete job" class="border-2 border-gray-400 w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fa-regular fa-trash-can text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
