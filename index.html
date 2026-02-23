@@ -6,6 +6,7 @@
     <title>Document</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="#tailwind.init.css" rel="stylesheet">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -58,25 +59,29 @@
                     <div class="flex-1">
                         <!-- Header -->
                         <div>
-                            <p class="text-lg font-bold text-gray-900">Mobile First Corp</p>
-                            <p class="text-lg font-semibold text-gray-500">React Native Developer</p>
+                            <p class="companyName text-lg font-bold text-gray-900">Mobile First Corp</p>
+                            <p class="position text-lg font-semibold text-gray-500">React Native Developer</p>
                         </div>
 
                         <!-- Job Details -->
                         <div>
-                            <p class="text-lg text-gray-500 my-5">Remote • Full-time • $130,000 - $175,000</p>
+                            <p class="text-lg text-gray-500 my-5">
+                                <span class="location">Remote</span> • 
+                                <span class="type">Full-time</span> • 
+                                <span class="salary">$130,000 - $175,000</span>
+                            </p>
                             
                             <!-- Status Badge -->
-                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            <p class="status inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
                             
                             <!-- Description -->
-                            <p class="text-gray-700 mt-3 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                        </div>
+                            <p class="description text-gray-700 mt-3 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        </div> 
 
                         <!-- Action Buttons -->
                         <div class="flex flex-col md:flex-row gap-4">
-                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
-                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                            <button class="interview border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="rejected border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
                     </div>
 
@@ -94,25 +99,29 @@
                     <div class="flex-1">
                         <!-- Header -->
                         <div>
-                            <p class="text-lg font-bold text-gray-900">WebFlow Agency</p>
-                            <p class="text-lg font-semibold text-gray-500">Web Designer & Developer</p>
+                            <p class="companyName text-lg font-bold text-gray-900">WebFlow Agency</p>
+                            <p class="position text-lg font-semibold text-gray-500">Web Designer & Developer</p>
                         </div>
 
                         <!-- Job Details -->
                         <div>
-                            <p class="text-lg text-gray-500 my-5">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
-                            
+                            <p class="text-lg text-gray-500 my-5">
+                                <span class="location">Los Angeles, CA</span> • 
+                                <span class="type">Part-time</span> • 
+                                <span class="salary">$80,000 - $120,000</span>
+                            </p>
+
                             <!-- Status Badge -->
-                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            <p class="status inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
                             
                             <!-- Description -->
-                            <p class="text-gray-700 mt-3 mb-5">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                            <p class="description text-gray-700 mt-3 mb-5">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="flex flex-col md:flex-row gap-3">
-                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
-                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                            <button class="interview border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="rejected border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
                     </div>
 
@@ -130,25 +139,29 @@
                     <div class="flex-1">
                         <!-- Header -->
                         <div>
-                            <p class="text-lg font-bold text-gray-900">DataViz Solutions</p>
-                            <p class="text-lg font-semibold text-gray-500">Data Visualization Specialist</p>
+                            <p class="companyName text-lg font-bold text-gray-900">DataViz Solutions</p>
+                            <p class="position text-lg font-semibold text-gray-500">Data Visualization Specialist</p>
                         </div>
 
                         <!-- Job Details -->
                         <div>
-                            <p class="text-lg text-gray-500 my-5">Boston, MA • Full-time • $125,000 - $165,000</p>
+                            <p class="text-lg text-gray-500 my-5">
+                                <span class="location">Boston, MA</span> • 
+                                <span class="type">Full-time</span> • 
+                                <span class="salary">$125,000 - $165,000</span>
+                            </p>
                             
                             <!-- Status Badge -->
-                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            <p class="status inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
                             
                             <!-- Description -->
-                            <p class="text-gray-700 mt-3 mb-5">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                            <p class="description text-gray-700 mt-3 mb-5">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="flex flex-col md:flex-row gap-3">
-                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
-                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                            <button class="interview border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="rejected border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
                     </div>
 
@@ -166,25 +179,29 @@
                     <div class="flex-1">
                         <!-- Header -->
                         <div>
-                            <p class="text-lg font-bold text-gray-900">CloudFirst Inc</p>
-                            <p class="text-lg font-semibold text-gray-500">Backend Developer</p>
+                            <p class="companyName text-lg font-bold text-gray-900">CloudFirst Inc</p>
+                            <p class="position text-lg font-semibold text-gray-500">Backend Developer</p>
                         </div>
 
                         <!-- Job Details -->
                         <div>
-                            <p class="text-lg text-gray-500 my-5">Seattle, WA • Full-time • $140,000 - $190,000</p>
+                            <p class="text-lg text-gray-500 my-5">
+                                <span class="location">Seattle, WA</span> • 
+                                <span class="type">Full-time</span> • 
+                                <span class="salary">$140,000 - $190,000</span>
+                            </p>
                             
                             <!-- Status Badge -->
-                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            <p class="status inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
                             
                             <!-- Description -->
-                            <p class="text-gray-700 mt-3 mb-5">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                            <p class="description text-gray-700 mt-3 mb-5">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="flex flex-col md:flex-row gap-3">
-                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
-                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                            <button class="interview border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="rejected border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
                     </div>
 
@@ -202,25 +219,29 @@
                     <div class="flex-1">
                         <!-- Header -->
                         <div>
-                            <p class="text-lg font-bold text-gray-900">Innovation Labs</p>
-                            <p class="text-lg font-semibold text-gray-500">UI/UX Engineer</p>
+                            <p class="companyName text-lg font-bold text-gray-900">Innovation Labs</p>
+                            <p class="position text-lg font-semibold text-gray-500">UI/UX Engineer</p>
                         </div>
 
                         <!-- Job Details -->
                         <div>
-                            <p class="text-lg text-gray-500 my-5">Austin, TX • Full-time • $110,000 - $150,000</p>
+                            <p class="text-lg text-gray-500 my-5">
+                                <span class="location">Austin, TX</span> • 
+                                <span class="type">Full-time</span> • 
+                                <span class="salary">$110,000 - $150,000</span>
+                            </p>
                             
                             <!-- Status Badge -->
-                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
-                            
+                            <p class="status inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                             
                             <!-- Description -->
-                            <p class="text-gray-700 mt-3 mb-5">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                            <p class="description text-gray-700 mt-3 mb-5">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="flex flex-col md:flex-row gap-3">
-                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
-                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                            <button class="interview border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="rejected border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
                     </div>
 
@@ -238,25 +259,29 @@
                     <div class="flex-1">
                         <!-- Header -->
                         <div>
-                            <p class="text-lg font-bold text-gray-900">MegaCorp Solutions</p>
-                            <p class="text-lg font-semibold text-gray-500">JavaScript Developer</p>
+                            <p class="companyName text-lg font-bold text-gray-900">MegaCorp Solutions</p>
+                            <p class="position text-lg font-semibold text-gray-500">JavaScript Developer</p>
                         </div>
 
                         <!-- Job Details -->
                         <div>
-                            <p class="text-lg text-gray-500 my-5">New York, NY • Full-time • $130,000 - $170,00</p>
+                            <p class="text-lg text-gray-500 my-5">
+                                <span class="location">New York, NY</span> • 
+                                <span class="type">Full-time</span> • 
+                                <span class="salary">$130,000 - $170,00</span>
+                            </p>
                             
                             <!-- Status Badge -->
-                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            <p class="status inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
                             
                             <!-- Description -->
-                            <p class="text-gray-700 mt-3 mb-5">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                            <p class="description text-gray-700 mt-3 mb-5">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="flex flex-col md:flex-row gap-3">
-                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
-                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                            <button class="interview border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="rejected border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
                     </div>
 
@@ -274,24 +299,29 @@
                     <div class="flex-1">
                         <!-- Header -->
                         <div>
-                            <p class="text-lg font-bold text-gray-900">StartupXYZ</p>
-                            <p class="text-lg font-semibold text-gray-500">Full Stack Engineer</p>
+                            <p class="companyName text-lg font-bold text-gray-900">StartupXYZ</p>
+                            <p class="position text-lg font-semibold text-gray-500">Full Stack Engineer</p>
                         </div>
 
                         <!-- Job Details -->
                         <div>
-                            <p class="text-lg text-gray-500 my-5">Remote • Full-time • $120,000 - $160,000</p>
+                            <p class="text-lg text-gray-500 my-5">
+                                <span class="location">Remote</span> • 
+                                <span class="type">Full-time</span> • 
+                                <span class="salary">$120,000 - $160,000</span>
+                            </p>
+
                             <!-- Status Badge -->
-                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            <p class="status inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
                             
                             <!-- Description -->
-                            <p class="text-gray-700 mt-3 mb-5">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                            <p class="description text-gray-700 mt-3 mb-5">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="flex flex-col md:flex-row gap-3">
-                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
-                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                            <button class="interview border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="rejected border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
                     </div>
 
@@ -309,25 +339,29 @@
                     <div class="flex-1">
                         <!-- Header -->
                         <div>
-                            <p class="text-lg font-bold text-gray-900">TechCorp Industries</p>
-                            <p class="text-lg font-semibold text-gray-500">Senior Frontend Developer</p>
+                            <p class="companyName text-lg font-bold text-gray-900">TechCorp Industries</p>
+                            <p class="position text-lg font-semibold text-gray-500">Senior Frontend Developer</p>
                         </div>
 
                         <!-- Job Details -->
                         <div>
-                            <p class="text-lg text-gray-500 my-5">San Francisco, CA • Full-time • $130,000 - $175,000</p>
+                            <p class="text-lg text-gray-500 my-5">
+                                <span class="location">San Francisco, CA</span> • 
+                                <span class="type">Full-time</span> • 
+                                <span class="salary">$130,000 - $175,000</span>
+                            </p>
                             
                             <!-- Status Badge -->
-                            <p class="inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            <p class="status inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
                             
                             <!-- Description -->
-                            <p class="text-gray-700 mt-3 mb-5">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                            <p class="description text-gray-700 mt-3 mb-5">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="flex flex-col md:flex-row gap-3">
-                            <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
-                            <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
+                            <button class="inteview border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
+                            <button class="rejected border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
                     </div>
 
