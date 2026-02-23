@@ -9,10 +9,10 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-gray-200">
+<body class="bg-gray-200 py-10" >
     <header class="w-[80%] mx-auto">
         <h1 class="text-3xl font-bold mb-4">Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             <div class="bg-white rounded-lg p-4">
                 <p>Total</p>
                 <p class="text-2xl font-bold" id="total">0</p>
@@ -35,13 +35,20 @@
             <p class="font-semibold text-gray-500">0 jobs</p>
         </div>
         
-        <div class="flex gap-3 d my-5">
+        <div class="flex flex-col md:flex-row gap-3 my-5">
             <button onclick="toggleStyle('all-filter-btn')" class="bg-blue-500 text-white rounded-sm px-9 py-1" id="all-filter-btn">All</button>
             <button onclick="toggleStyle('interview-filter-btn')" class="bg-white text-gray-500 rounded-sm px-4 py-1" id="interview-filter-btn">Interview</button>
             <button onclick="toggleStyle('rejected-filter-btn')" class="bg-white text-gray-500 rounded-sm px-4 py-1" id="rejected-filter-btn">Rejected</button>
         </div>
 
         <!-- Filtered card -->
+        <section id="filtered-section" class="hidden">
+            <div class="bg-white p-16 rounded-xl flex flex-col items-center text-center">
+                <img src="jobs.png" alt="jobs">
+                <h2 class="text-xl font-bold text-gray-800">No jobs available</h2>
+                <p class="text-lg text-gray-500">Check back soon for new job opportunities</p>
+            </div>
+        </section>
 
         <section id="allCards" class="space-y-6">
             <!-- Job Card 1 -->
@@ -67,7 +74,7 @@
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="flex gap-3">
+                        <div class="flex flex-col md:flex-row gap-4">
                             <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
                             <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
@@ -103,7 +110,7 @@
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="flex gap-3">
+                        <div class="flex flex-col md:flex-row gap-3">
                             <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
                             <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
@@ -139,7 +146,7 @@
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="flex gap-3">
+                        <div class="flex flex-col md:flex-row gap-3">
                             <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
                             <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
@@ -175,7 +182,7 @@
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="flex gap-3">
+                        <div class="flex flex-col md:flex-row gap-3">
                             <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
                             <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
@@ -211,7 +218,7 @@
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="flex gap-3">
+                        <div class="flex flex-col md:flex-row gap-3">
                             <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
                             <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
@@ -247,7 +254,7 @@
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="flex gap-3">
+                        <div class="flex flex-col md:flex-row gap-3">
                             <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
                             <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
@@ -282,7 +289,7 @@
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="flex gap-3">
+                        <div class="flex flex-col md:flex-row gap-3">
                             <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
                             <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
@@ -318,7 +325,7 @@
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="flex gap-3">
+                        <div class="flex flex-col md:flex-row gap-3">
                             <button class="border-2 border-green-600 px-6 py-2.5 rounded-lg text-green-600 font-semibold">INTERVIEW</button>
                             <button class="border-2 border-red-600 px-6 py-2.5 rounded-lg text-red-600 font-semibold">REJECTED</button>
                         </div>
