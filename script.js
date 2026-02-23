@@ -81,9 +81,7 @@ mainContainer.addEventListener('click',function(event) {
         }
         //console.log(cardInfo)
 
-        const InterviewHappen = interviewList.find(item => item.companyName == cardInfo.companyName)//this part felt complecated
-
-        parenNode.querySelector('.status').innerText = 'Interview'
+        const InterviewHappen = interviewList.find(item => item.companyName == cardInfo.companyName)
 
         if(!InterviewHappen){
             interviewList.push(cardInfo)
@@ -113,23 +111,23 @@ function renderInterview(){
                     <div class="flex-1">
                         <!-- Header -->
                         <div>
-                            <p class="companyName text-lg font-bold text-gray-900">Mobile First Corp</p>
-                            <p class="position text-lg font-semibold text-gray-500">React Native Developer</p>
+                            <p class="companyName text-lg font-bold text-gray-900">${interview.companyName}</p>
+                            <p class="position text-lg font-semibold text-gray-500">${interview.position}</p>
                         </div>
 
                         <!-- Job Details -->
                         <div>
                             <p class="text-lg text-gray-500 my-5">
-                                <span class="location">Remote</span> • 
-                                <span class="type">Full-time</span> • 
-                                <span class="salary">$130,000 - $175,000</span>
+                                <span class="location">${interview.location}</span> • 
+                                <span class="type">${interview.type}</span> • 
+                                <span class="salary">${interview.salary}</span>
                             </p>
                             
                             <!-- Status Badge -->
-                            <p class="status inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">NOT APPLIED</p>
+                            <p class="status inline-block px-4 py-2 bg-gray-300 font-semibold rounded-md text-sm">${interview.status}</p>
                             
                             <!-- Description -->
-                            <p class="description text-gray-700 mt-3 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            <p class="description text-gray-700 mt-3 mb-5">${interview.description}</p>
                         </div> 
 
                         <!-- Action Buttons -->
